@@ -10,6 +10,7 @@ import { User } from './users/user.model';
 import { DonationService } from './donations/donation.service';
 import { DonationsController } from './donations/donations.controller';
 import { FormatService } from './services/format.service';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [AuthModule, UsersModule,
@@ -24,7 +25,7 @@ import { FormatService } from './services/format.service';
     }), HttpModule.register({
       timeout: 50000,
       maxRedirects: 5
-    })],
+    }), ConfigModule.forRoot()],
   controllers: [AppController, DonationsController],
   providers: [AppService, ErrorService, DonationService, FormatService,],
   exports:[ErrorService]
