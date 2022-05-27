@@ -23,7 +23,8 @@ export class DonationService {
 
     url= process.env.URLBASECS
     headers:AxiosRequestHeaders = {
-      Accept: 'application/json'
+        Accept: 'application/json',
+        authorization:"nNeb4KXrfyWKbEOtFi8fFooTU5C0KIuIYx74HIViwKUQBxtEoVxOs3Pr8AaoU7tZ"
   }
     constructor(private http: HttpService, private error:ErrorService, private format:FormatService) { }
     
