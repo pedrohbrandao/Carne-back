@@ -11,7 +11,7 @@ export class DonationsController {
     constructor(private donation: DonationService) { }
 
     @UseGuards(JwtAuthGuard)
-    @Get()
+    @Post()
     async GetOrd(@Res() response: Response, @Req() req: Request) {
         const buffer = await this.donation.carne(req.body)
         response.set({
@@ -21,7 +21,7 @@ export class DonationsController {
         return response.end(buffer)
     }
     @UseGuards(JwtAuthGuard)
-    @Post()
+    @Get()
     async teste(@Res() response: Response, @Req() req: Request) {
         log(req.headers)
         return 200
