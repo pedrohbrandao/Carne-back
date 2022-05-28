@@ -37,7 +37,7 @@ export class DonationService {
     async Moip_ordGet(idPayment: any): Promise<any> {
         const response = await this.moip.payment.getOne(idPayment.data._payment)
         const file = { url: response.body._links.payBoleto.printHref, name: 'example.pdf' };
-        return generatePdf(file, {format:"a4", scale:1.5, timeout:0})
+        return generatePdf(file, { format: "a4", scale: 1.5, timeout: 0, args: ['--no-sandbox']})
     }
 
     async carne(donation: People): Promise<any>{
