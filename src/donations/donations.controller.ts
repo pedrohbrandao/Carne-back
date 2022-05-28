@@ -10,7 +10,6 @@ export class DonationsController {
 
     constructor(private donation: DonationService) { }
 
-    @UseGuards(JwtAuthGuard)
     @Post()
     async GetOrd(@Res() response: Response, @Req() req: Request) {
         const buffer = await this.donation.carne(req.body)
