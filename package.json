@@ -33,6 +33,7 @@
     "axios": "^0.27.2",
     "bcrypt": "^5.0.1",
     "dayjs": "^1.11.2",
+    "html-pdf-node": "^1.0.8",
     "html-pdf-node-ts": "^1.0.7",
     "i": "^0.3.7",
     "merge-pdf-buffers": "^1.0.3",
